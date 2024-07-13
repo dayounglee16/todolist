@@ -54,19 +54,19 @@ function App() {
         date: new Date().getTime(),
       },
     });
-  });
+  }, []);
 
   const onUpdate = useCallback((targetId) => {
     dispatch({
       type: "UPDATE",
-      target: targetId,
+      targetId,
     });
   }, []);
 
   const onDelete = useCallback((targetId) => {
     dispatch({
       type: "DELETE",
-      targetId: targetId,
+      targetId,
     });
   }, []);
 
